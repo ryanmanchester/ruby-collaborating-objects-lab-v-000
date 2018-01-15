@@ -19,8 +19,8 @@ binding.pry
 end
 
 def artist_name=(name)
-  new_artist_object = Artist.find_or_create_by_name(name)
-  self.artist = new_artist_object
+  artist = Artist.find_or_create_by_name(name)
+  artist.add_song(self)
 # binding.pry
  end
 

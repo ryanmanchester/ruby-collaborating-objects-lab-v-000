@@ -15,7 +15,7 @@ end
 #   song = Song.new(new_file[1])
 #   song.artist_name=(name)
 
-end
+#end
 
 def artist_name=(name)
   if (self.artist.nil?)

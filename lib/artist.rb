@@ -30,8 +30,10 @@ class Artist
     if artist != nil
         artist
     else
-      Artist.new(name)
+    artist =  Artist.new(name)
+    artist.save
     end
+    artist
   end
 
   def print_songs

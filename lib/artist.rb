@@ -28,7 +28,7 @@ class Artist
     # binding.pry
     self.all.detect do |n|
         binding.pry
-      if n == name
+      if n.name == name
         self
       else
         Artist.new(name)

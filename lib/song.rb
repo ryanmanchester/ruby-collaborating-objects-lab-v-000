@@ -13,13 +13,13 @@ end
 def self.new_by_filename(filename)
   new_file = filename.split(" - ")
   new_instance = Song.new(new_file[1])
-  new_instance.artist_name=(name)
+  #new_instance.artist_name=(name)
   #song
   #binding.pry
 end
 
 def artist_name=(name)
-  Artist.find_or_create_by_name(name).artist.add_song(song)
+  Artist.find_or_create_by_name(name)
 
   binding.pry
 end

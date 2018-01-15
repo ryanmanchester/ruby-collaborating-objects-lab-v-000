@@ -10,21 +10,18 @@ def name
   @name
 end
 
-# def self.new_by_filename(filename)
-#   new_file = filename.split(" - ")
-#   song = Song.new(new_file[1])
-#   song.artist_name=(name)
+def self.new_by_filename(filename)
+  new_file = filename.split(" - ")
+  song = Song.new(new_file[1])
+  song.artist_name=(name)
 
-#end
+end
 
 def artist_name=(name)
-  if (self.artist.nil?)
-      self.artist = Artist.new(name)
-  else
-      self.artist.name = name
-      binding.pry
-    end
-  end
+  new_artist_object = Artist.find_or_create_by_name(name)
+  self.artist = new_artist_object
+binding.pry
+ end
 
 
 end

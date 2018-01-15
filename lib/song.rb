@@ -15,7 +15,7 @@ def self.new_by_filename(filename)
   song = Song.new(new_file[1])
   #song.artist_name=(name)
   song
-binding.pry
+#binding.pry
 end
 
 def artist_name=(name)

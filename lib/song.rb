@@ -18,10 +18,13 @@ def self.new_by_filename(filename)
 end
 
 def artist_name=(name)
-  new_artist_object = Artist.find_or_create_by_name(name)
-  self.artist = new_artist_object
-binding.pry
- end
+  if (self.artist.nil?)
+      self.artist = Artist.new(name)
+  else
+      self.artist.name = name
+      pry
+    end
+  end
 
 
 end

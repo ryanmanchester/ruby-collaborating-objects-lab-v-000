@@ -22,7 +22,7 @@ def artist_name=(name)
       self.artist = Artist.new(name)
   else
       self.artist.name = name
-      pry
+      binding.pry
     end
   end
 

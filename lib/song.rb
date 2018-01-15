@@ -15,6 +15,7 @@ def self.new_by_filename(filename)
   #binding.pry
   song = Song.new(new_file[1])
   song.artist_name=(new_file[0])
+  song.save
   song
 
 end

@@ -15,14 +15,14 @@ def self.new_by_filename(filename)
   #binding.pry
   song = Song.new(new_file[1])
   song.artist_name=(new_file[0])
-  
+
   song
 
 end
 
 def artist_name=(name)
   #binding.pry
-  artist = Artist.find_or_create_by_name(name)
+  self.artist = Artist.find_or_create_by_name(name)
   artist.add_song(self)
  #binding.pry
  end
